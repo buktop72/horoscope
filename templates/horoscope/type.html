@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load djutils %}
+{% block title %}Стихии{% endblock %}
+
+{% block content %}
+
+<ul class="list-group">
+    {% for key, value in signs.items %}
+        <li class="list-group-item active" aria-current="true"><a href="{% url 'type_list' type=key %}" style="color:white">{{ key | upper}} </a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

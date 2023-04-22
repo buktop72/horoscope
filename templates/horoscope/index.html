@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load djutils %}
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+
+<ul class="list-group list-group-light">
+    {% for sign in signs %}
+    <li class="list-group-item"><a href="{% url 'signs' sign=sign %}">{{ signs_rus | get_value_from_dict:sign | upper }}</a></li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

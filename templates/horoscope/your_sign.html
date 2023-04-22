@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load djutils %}
+{% block title %}Ваш знак зодиака{% endblock %}
+
+{% block content %}
+<div class="card">
+  <div class="card-header">
+    Введите дату своего рождения
+  </div>
+</div>
+
+<form action="" method="post"> {% csrf_token %}
+  <label for="month">Месяц:</label><br>
+  <input type="number" id="month" name="month" value="1"><br>
+  <label for="day">День:</label><br>
+  <input type="number" id="day" name="day" value="1"><br><br>
+  <input type="submit" value="Отправить">
+</form>
+
+{% endblock %}

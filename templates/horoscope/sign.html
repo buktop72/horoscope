@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load djutils %}
+{% block title %}{{ sign }}{% endblock %}
+
+{% block content %}
+
+<div class="card" style="width: 18rem;">
+    <img src={{ pic | get_value_from_dict:sign }} class="card-img-top" alt="...">
+    <div class="card-body">
+        <p class="card-text">{{ info | get_value_from_dict:sign }}</p>
+    </div>
+</div>
+
+
+{% endblock %}
